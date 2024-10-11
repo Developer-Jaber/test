@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoptation Platform</title>
+    <!-- adding tailwindcss and daysi UI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- added google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- taiwind customied -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'main-btn':'#0E7A81'
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="lato-light">
+      <!-- =========================== header section ======================== -->
+      <header class="w-10/12 mx-auto my-7">
+        <!-- added nav ber -->
+        <div class="navbar bg-base-100 my-5">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li><a>Item 1</a></li>
+                  <li>
+                    <a>Parent</a>
+                    <ul class="p-2">
+                      <li><a>Submenu 1</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Item 3</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost text-xl">
+                <div class="">
+                    <img src="./images/logo.webp" alt="">
+                </div>
+                <div class="text-3xl font-extrabold mx-2">
+                    Peddy
+                </div>
+              </a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 text-lg font-semibold text-gray-400">
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a>
+                <img src="https://img.icons8.com/?size=48&id=XOn9u5ajbq8a&format=png" alt="">
+              </a>
+            </div>
+        </div>
+
+        <!-- added  hero section -->
+        <div class="hero">
+            <div class="hero-content text-center">
+              <div class="max-w-3xl">
+                <p class="text-2xl font-extrabold lato-black text-gray-500">Bringing Families Together ❤️‍🔥</p>
+                <h1 class="text-6xl mt-10 font-bold ">Your Path to Adoption Starts Here</h1>
+                <p class="py-6  font-semibold">
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                </p>
+
+                <button class="btn btn-primary bg-main-btn border-none text-xl px-7 text-white"><a href="#adapt-section">View More</a></button>
+
+                <div class="max-w-3xl py-7">
+                    <img src="./images/pet.webp" alt="">
+                </div>
+              </div>
+              
+            </div>
+        </div>
+      </header>
+       <!-- =========================== main section ========================== -->
+      <main>
+          <!-- adapt section head -->
+          <section id="adapt-section" class="w-10/12 mx-auto my-4 mb-16">
+            <!-- added header of this section -->
+            <div class="hero">
+                <div class="hero-content text-center">
+                  <div class="max-w-2xl">
+                    <h1 class="text-5xl font-bold">Adopt  Your  Best Friend</h1>
+                    <p class="py-6  font-semibold text-gray-500">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.  </p>
+                  </div>
+                </div>
+            </div>
+            <!-- =========== added  Button container section ============ -->
+            <section id="button-container" class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                
+            </section>
+
+
+            <!-- =========== added dinamic adopt card container section ============ -->
+             <section id="display-pet-card">
+                <nav class="navbar my-5">
+                    <div class="navbar-start">
+                        <p class="text-xl font-extrabold">Best Deal For you</p>
+                    </div>
+                    <div class="navbar-end">
+                        <button id="sort-btn" class="btn bg-main-btn px-6  text-white">Sort by Price</button>
+                    </div>
+                </nav>
+
+                <!-- all pet  card section -->
+                 <section id="card-area" class="grid grid-cols-4 gap-3">
+                    <div id="all-pet-card" class="col-span-3 grid grid-cols-3 gap-4">
+
+                      <!-- Open the modal using ID.showModal() method -->
+                      
+                    </div>
+                    <div class="col-span-1  border-2  p-3 border-gray-200 rounded-lg">
+                        <div id="liked-pet-conatiner" class="grid grid-cols-2 gap-2">
+
+                        </div>
+                    </div>
+                 </section>
+
+             </section>
+          </section>
+
+          <!-- modal 1 for pet details button-->
+          <button id="show-modal-data" class="btn hidden" onclick="customModal.showModal()">open modal</button>
+          <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+              <div id="modal-content">
+
+              </div>
+              <div class="modal-action">
+                <form method="dialog" class="w-full">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn w-full bg-green-200 text-main-btn">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+
+          <!-- modal 2 for pet adoptation button-->
+          <button id="show-adoptaed-modal" class="btn hidden" onclick="adoptedModal.showModal()">open modal</button>
+          <dialog id="adoptedModal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box" >
+              <div id="adoptation-modal-content">
+
+              </div>
+              <div class="modal-action">
+                <form method="dialog" class="w-full">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button id="close-adopt-modal" class="btn w-full hidden bg-green-200 text-main-btn">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+      </main>
+      <!-- =========================== footer section ======================== -->
+    <div class="bg-black py-16">
+      <footer class="footer w-10/12 mx-auto justify-between text-white text-base-content p-10">
+        <aside>
+          <a class="btn btn-ghost px-0 text-xl">
+            <div class="">
+                <img src="./images/logo.webp" alt="">
+            </div>
+            <div class="text-3xl font-extrabold mx-2">
+                Peddy
+            </div>
+          </a>
+          <p class="text-gray-300 font-bold">
+            Location: av. Washington 165, NY CA <br>54003 <br>
+            Phone: +31 85 964 47 25 <br>
+            Email: info@yourdomain.com <br>
+            Openings hours: 9.00 AM - 5.00 PM
+          </p>
+        </aside>
+        <nav>
+          <h6 class="footer-title">Useful Links</h6>
+          <a class="link link-hover">Home</a>
+          <a class="link link-hover">Animals</a>
+          <a class="link link-hover">Foundation</a>
+          <a class="link link-hover">Contact</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Drop a Massage</h6>
+          <input type="email" placeholder="email" class="input input-bordered w-full" required />
+          <div class="form-control mt-6">
+            <button class="btn bg-main-btn btn-wide border-none text-white">Subscribe</button>
+          </div>
+        </nav>
+      </footer>
+    </div>
+    
+    
+
+     <script src="./js/script.js"></script>
+</body>
+</html>
